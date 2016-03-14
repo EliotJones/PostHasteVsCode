@@ -1,0 +1,36 @@
+{
+	"name": "posthaste",
+	"displayName": "PostHaste",
+	"description": "Posts code to HasteBin",
+	"version": "0.0.1",
+	"publisher": "EliotJones",
+	"engines": {
+		"vscode": "^0.10.10"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.posthaste"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"commands": [{
+			"command": "extension.posthaste",
+			"title": "Post Haste"
+		}],
+        "keybindings": [{
+            "command": "extension.posthaste",
+            "key": "ctrl+alt+h"
+        }] 
+	},
+	"scripts": {
+		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"typescript": "^1.8.5",
+		"vscode": "^0.11.0"
+	}
+}
