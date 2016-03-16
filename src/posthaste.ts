@@ -2,6 +2,7 @@ import * as vscode from 'vscode';
 import * as apiclient from './apiclient';
 import { platform } from 'os';
 import { exec, spawn } from 'child_process';
+import { getLanguageExtension } from "./language"
 
 interface UploadData {
     language: string;
@@ -47,6 +48,12 @@ export function postHastily() : void {
 export function copyReturnedUrl(key: string, language: string) {
     
     var url = "http://hastebin.com/" + key;
+    
+    var extension = getLanguageExtension(language);
+    
+    if (extension) {
+        url += `.${extension}`;
+    }
             
     writeToClipboard(url);
             

@@ -1,8 +1,8 @@
 {
 	"name": "posthaste",
 	"displayName": "PostHaste",
-	"description": "Posts code to HasteBin",
-	"version": "1.0.2",
+	"description": "Posts code to hastebin (http://hastebin.com)",
+	"version": "1.0.3",
 	"publisher": "EliotJones",
     "repository": {
         "type": "git",
